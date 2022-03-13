@@ -1,5 +1,6 @@
 /* eslint-disable */
 require('dotenv').config()
+const { format } = require('util');
 const express = require('express');
 const { join } = require('path');
 const helmet = require('helmet');
@@ -8,7 +9,7 @@ const compression = require('compression');
 const { Storage } = require('@google-cloud/storage');
 const morgan = require('morgan');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 const app = express();
 
@@ -38,7 +39,7 @@ app.post('/api/v1/upload', multer.single('file'), (req, res, next) => {
     res.status(400).send('No file uploaded.');
     return;
   }
-  const name = `${req.game}${req.file.originalname}`
+  const name = `test/${req.file.originalname}`
   // Create a new blob in the bucket and upload the file data.
   const blob = bucket.file(name);
   const blobStream = blob.createWriteStream();
