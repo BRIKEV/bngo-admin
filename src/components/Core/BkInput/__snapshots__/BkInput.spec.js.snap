@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BkInput component Should be render correctly 1`] = `
+<div
+  class="input-container"
+>
+  <input
+    class=""
+    data-cy=""
+    id=""
+    name=""
+    placeholder=""
+    required="required"
+    type=""
+  />
+   
+  <label
+    class=""
+    for=""
+  >
+    
+  </label>
+</div>
+`;

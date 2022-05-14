@@ -1,15 +1,19 @@
 <template>
+  <BkHeader
+    logo
+    title="Bngo app"
+  />
   <main>
     <CropperBox
       @img-cropped="uploadImage"
     />
-    
   </main>
 </template>
 <script setup lang="ts">
 import CropperBox from '@/components/CropperBox.vue';
 import type { CropperResultType, Image } from '@/components/CropperBox.model';
 import * as api from '@/api/upload';
+import BkHeader from '../components/Core/BkHeader/BkHeader.vue';
 
 const uploadImage = (croppedResult: CropperResultType, image: Image) => {
   const { canvas } = croppedResult;
