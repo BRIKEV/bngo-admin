@@ -21,7 +21,7 @@
           accept="image/*"
         />
       </div>
-      <button class="button" @click="cropImage()">Crop & upload image</button>
+      <button type="button" class="button" @click="cropImage()">Crop image</button>
     </div>
 </template>
 
